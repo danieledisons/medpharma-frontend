@@ -194,9 +194,6 @@ export default function Patients() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        {/* <Bookconsultation /> */}
-        {/* <br /> */}
-        {/* <ConsultationListing /> */}
         <Addpatients />
         <br />
         <Patientsearch />

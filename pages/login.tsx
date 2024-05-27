@@ -8,7 +8,6 @@ import Alert from "@mui/material/Alert";
 import LoadingButton from "@mui/lab/LoadingButton";
 import axios from "axios";
 import Link from "next/link";
-// import { useAuth } from "../src/context/AuthContext"; // Import the useAuth hook
 
 const Login = () => {
   const [data, setData] = useState({
@@ -17,7 +16,6 @@ const Login = () => {
   });
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  // const { saveToken } = useAuth(); // Destructure saveToken from useAuth
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,7 +34,6 @@ const Login = () => {
       });
       console.log("Login successful:", response.data);
       if (response.status === 200) {
-        // saveToken(response.data.token); // Save the token using the context
         window.location.href = "/dashboard";
       }
       setLoading(false);

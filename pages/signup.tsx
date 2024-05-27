@@ -7,7 +7,6 @@ import Checkbox from "@mui/material/Checkbox";
 import Alert from "@mui/material/Alert";
 import LoadingButton from "@mui/lab/LoadingButton";
 import axios from "axios";
-// import { useAuth } from "../src/context/AuthContext"; // Import the useAuth hook
 
 const Signup = () => {
   const [data, setData] = useState({
@@ -16,7 +15,6 @@ const Signup = () => {
   });
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  // const { saveToken } = useAuth(); // Destructure saveToken from useAuth
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +33,6 @@ const Signup = () => {
       });
       console.log("Login successful:", response.data);
       if (response.status === 201) {
-        // saveToken(response.data.token); // Save the token using the context
         window.location.href = "/dashboard";
       }
       setLoading(false);

@@ -41,7 +41,7 @@ export default function BookConsultation() {
         data,
         {
           headers: {
-            Authorization: `Bearer ${token}`, // Add the token to the headers
+            Authorization: `Bearer ${token}`,
           },
         }
       );

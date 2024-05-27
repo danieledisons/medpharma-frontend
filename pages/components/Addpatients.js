@@ -35,15 +35,14 @@ export default function Addpatients() {
     setLoading(true);
     setTriggerSuccess(false);
     console.log(data);
-    e.preventDefault(); // Prevents the form from submitting the traditional way
+    e.preventDefault();
     try {
       const result = await axios.post(
-        // "https://medpharma-server.vercel.app/add-consultation",
         "http://localhost:3002/add-patient",
         data,
         {
           headers: {
-            Authorization: `Bearer ${token}`, // Add the token to the headers
+            Authorization: `Bearer ${token}`,
           },
         }
       );

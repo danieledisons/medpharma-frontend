@@ -25,7 +25,6 @@ import Bookconsultation from "./components/bookconsultation";
 import ConsultationListing from "./components/ConsultationListing";
 import Patientsearch from "./components/Patientsearch";
 import Addpatients from "./components/AddPatients";
-// import { useSelector } from "react-redux";
 
 const drawerWidth = 240;
 
@@ -94,9 +93,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function MiniDrawer() {
-  // const token = useSelector((state) => state?.auth.token);
-  // console.log(token);
+export default function Dashboard() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [currentNav, setCurrentNav] = useState("Consultations");
@@ -209,7 +206,6 @@ export default function MiniDrawer() {
           <br />
           <ConsultationListing />
           <br />
-          {/* <Patientsearch /> */}
         </Box>
       ) : null}
       {currentNav === "Patient" ? (

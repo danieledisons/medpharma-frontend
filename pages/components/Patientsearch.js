@@ -12,7 +12,7 @@ const Patientsearch = () => {
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
-    patientDetails: null, // State to hold patient details
+    patientDetails: null,
   });
   const [loading, setLoading] = useState(false);
 
@@ -30,7 +30,6 @@ const Patientsearch = () => {
           },
         }
       );
-      // Update patientDetails state with fetched data
       setData({ ...data, patientDetails: response.data });
       console.log("RESPONSE>>>", response.data);
     } catch (error) {
